@@ -16,6 +16,7 @@ defmodule AgendaWeb.ChannelCase do
   """
 
   use ExUnit.CaseTemplate
+  alias Ecto.Adapters.SQL.Sandbox
 
   using do
     quote do
@@ -28,10 +29,10 @@ defmodule AgendaWeb.ChannelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Agenda.Repo)
+    :ok = Sandbox.checkout(Agenda.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Agenda.Repo, {:shared, self()})
+      Sandbox.mode(Agenda.Repo, {:shared, self()})
     end
 
     :ok
