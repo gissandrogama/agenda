@@ -5,7 +5,7 @@ defmodule Agenda.CreateUser do
 
   import Ecto.Changeset
 
-  alias Agenda.{User, Repo}
+  alias Agenda.{Repo, User}
 
   def run(params) do
     %User{}
@@ -20,5 +20,4 @@ defmodule Agenda.CreateUser do
   end
 
   defp put_password(changeset), do: changeset
-
 end

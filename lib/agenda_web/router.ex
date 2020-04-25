@@ -5,7 +5,9 @@ defmodule AgendaWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", AgendaWeb do
+  scope "/api/v1", AgendaWeb do
     pipe_through :api
+
+    post("/users", UserController, :create)
   end
 end

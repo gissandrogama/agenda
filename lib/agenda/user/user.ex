@@ -3,7 +3,7 @@ defmodule Agenda.User do
   Schema do usuário
   """
   use Ecto.Schema
-  
+
   schema "users" do
     field :email, :string
     field :name, :string
