@@ -3,7 +3,7 @@ defmodule Agenda.Factory do
   Função para adcionar usuarios nos teste
   """
   # with Ecto
-  use ExMachina.Ecto, repo: Claim.Repo
+  use ExMachina.Ecto, repo: Agenda.Repo
 
   def user_factory do
     %Agenda.User{

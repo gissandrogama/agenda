@@ -26,6 +26,14 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :agenda, AgendaWeb.Guardian,
+  issuer: "agenda_web",
+  secret_key: "WV0vOU5AQlBgkF1aHyf7+zBMc02gQfHq9z+CGl3gvNxZPRx+T5vfa4guyyj3ioTU"
+
+config :agenda, AgendaWeb.AuthAccessPipeline,
+  module: AgendaWeb.Guardian,
+  error_handler: AgendWeb.AuthErrorHandler
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

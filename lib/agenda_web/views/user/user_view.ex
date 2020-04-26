@@ -1,4 +1,4 @@
-defmodule AgendaWeb.UserView do
+defmodule AgendaWeb.User.UserView do
   use AgendaWeb, :view
 
   def render("user.json", %{user: user}) do
