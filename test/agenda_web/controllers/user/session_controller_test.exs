@@ -12,7 +12,10 @@ defmodule AgendaWeb.User.SessionControllerTest do
 
     test "returns 200 when admin credentials are valid", %{conn: conn} do
       conn =
-        post(conn, "/api/v1/users/sign_in", %{"email" => "henrygama@gmail.com", "password" => "123456"})
+        post(conn, "/api/v1/users/sign_in", %{
+          "email" => "henrygama@gmail.com",
+          "password" => "123456"
+        })
 
       assert %{"status" => "ok", "data" => %{"name" => "Henry Gama", "token" => _}} =
                json_response(conn, 200)

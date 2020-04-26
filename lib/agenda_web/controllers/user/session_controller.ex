@@ -9,6 +9,7 @@ defmodule AgendaWeb.User.SessionController do
       {:ok, user} ->
         {:ok, token, _} = Guardian.encode_and_sign(user)
         render(conn, "session.json", %{user: user, token: token})
+
       {:error, _} ->
         conn
         |> put_status(401)
