@@ -1,4 +1,4 @@
-defmodule ClaimWeb.AuthErrorHandler do
+defmodule AgendaWeb.AuthErrorHandler do
   @moduledoc """
   O manipulador de erros é um módulo que implementa uma auth_errorfunção.
   """

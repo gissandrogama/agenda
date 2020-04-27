@@ -1,4 +1,4 @@
-defmodule ClaimWeb.AuthAccessPipeline do
+defmodule AgendaWeb.AuthAccessPipeline do
   @moduledoc """
   Um pipeline é uma maneira de coletar os vários plugues para um esquema de autenticação específico.
   """

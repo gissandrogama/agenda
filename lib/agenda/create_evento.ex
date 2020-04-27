@@ -21,7 +21,7 @@ defmodule Agenda.CreateEvento do
     today = Calendar.Date.today!("America/Sao_Paulo")
 
     case Date.compare(data, today) do
-      :lt -> add_error(changeset, :starts_at, "should be before ends_at")
+      :lt -> add_error(changeset, :data, "should be before today")
       _ -> changeset
     end
   end
