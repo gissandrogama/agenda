@@ -11,7 +11,7 @@ defmodule Agenda.CreateEventoTest do
 
       params = %{
         name: "Palestra 2020",
-        data: ~D[2020-04-30],
+        data: ~D[2020-05-30],
         hora: ~T[16:00:00],
         local: "Hangar",
         created_by_id: user.id
@@ -19,7 +19,7 @@ defmodule Agenda.CreateEventoTest do
 
       assert {:ok, %Evento{} = evento} = CreateEvento.run(params)
       assert evento.name == "Palestra 2020"
-      assert evento.data == ~D[2020-04-30]
+      assert evento.data == ~D[2020-05-30]
       assert evento.hora == ~T[16:00:00]
       assert evento.local == "Hangar"
       assert evento.created_by_id == user.id
@@ -30,7 +30,7 @@ defmodule Agenda.CreateEventoTest do
 
       params = %{
         name: "",
-        data: ~D[2020-04-30],
+        data: ~D[2020-05-30],
         hora: ~T[16:00:00],
         local: "Hangar",
         created_by_id: user.id
@@ -60,7 +60,7 @@ defmodule Agenda.CreateEventoTest do
 
       params = %{
         name: "Palestra 2020",
-        data: ~D[2020-04-30],
+        data: ~D[2020-05-30],
         hora: nil,
         local: "Hangar",
         created_by_id: user.id
@@ -75,7 +75,7 @@ defmodule Agenda.CreateEventoTest do
 
       params = %{
         name: "Palestra 2020",
-        data: ~D[2020-04-30],
+        data: ~D[2020-05-30],
         hora: ~T[16:00:00],
         local: "",
         created_by_id: user.id
@@ -88,7 +88,7 @@ defmodule Agenda.CreateEventoTest do
     test "returns errot when created_by_id is invalid" do
       params = %{
         name: "Palestra 2020",
-        data: ~D[2020-04-30],
+        data: ~D[2020-05-30],
         hora: ~T[16:00:00],
         local: "Hangar",
         created_by_id: 55

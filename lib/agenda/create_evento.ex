@@ -1,6 +1,6 @@
 defmodule Agenda.CreateEvento do
   @moduledoc """
-  Creating an elevtion
+  Função para criar um evento
   """
 
   import Ecto.Changeset
