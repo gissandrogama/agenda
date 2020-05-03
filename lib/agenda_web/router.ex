@@ -21,5 +21,6 @@ defmodule AgendaWeb.Router do
     pipe_through :api_as_user
 
     post("/eventos", User.EventoController, :create)
+    post("/convites", ConviteController, :create)
   end
 end

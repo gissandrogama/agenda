@@ -5,7 +5,7 @@ defmodule Agenda.CreateEvento do
 
   import Ecto.Changeset
 
-  alias Agenda.{Repo, Evento}
+  alias Agenda.{Evento, Repo}
 
   def run(params) do
     %Evento{}
