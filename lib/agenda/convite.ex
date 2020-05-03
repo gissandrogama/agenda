@@ -14,5 +14,4 @@ defmodule Agenda.Convite do
     |> foreign_key_constraint(:evento_id)
     |> Repo.insert()
   end
-  
 end

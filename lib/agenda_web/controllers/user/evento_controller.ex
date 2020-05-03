@@ -5,7 +5,8 @@ defmodule AgendaWeb.User.EventoController do
   alias AgendaWeb.Guardian.Plug
 
   def create(conn, params) do
-    user = Plug.current_resource(conn) #plug do guardian
+    # plug do guardian
+    user = Plug.current_resource(conn)
     params = Map.put(params, "created_by_id", user.id)
 
     case CreateEvento.run(params) do

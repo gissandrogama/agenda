@@ -8,6 +8,7 @@ defmodule AgendaWeb.ConviteController do
     [head | _tail] = user
     evento = EventoRepo.get_evento!(String.to_integer(id))
     params = %{"user_id" => email, "evento_id" => id}
+
     params =
       params
       |> Map.put("evento_id", evento.id)
